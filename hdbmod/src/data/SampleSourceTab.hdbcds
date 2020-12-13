@@ -1,0 +1,37 @@
+namespace HanaFlowgraphPjt.hdbmod.data;
+
+context SampleSourceTab {
+
+Entity "PurchaseOrderHeader"
+{
+     "PURCHASEORDERID" : Integer ;
+	 "CREATEDBY" : String(10);
+	 "CREATEDAT" :LocalDate;
+	 "CHANGEDBY" :String(10);
+	 "CHANGEDAT" :LocalDate;
+	 "NOTEID" :String(10);
+	 "PARTNER" :String(10);
+	 "CURRENCY" :String(5);
+	 "GROSSAMOUNT" :Decimal(15,2);
+	 "NETAMOUNT" :Decimal(15,2) ;
+	 "TAXAMOUNT" :Decimal(15,2) ;
+	 "LIFECYCLESTATUS" :String(1);
+	 "APPROVALSTATUS" :String(1) ;
+	 "CONFIRMSTATUS" :String(1) ;
+	 "ORDERINGSTATUS" :String(1) ;
+	 "INVOICINGSTATUS" :String(1) ;
+};
+
+Entity "PurchaseOrderItem" {
+     "PURCHASEORDERID" : Integer; 
+	 "PRODUCT" : String(10);
+	 "NOTEID" : String(10);
+	 "CURRENCY" : String(5);
+	 "GROSSAMOUNT" : Decimal(15,2) ;
+	 "NETAMOUNT" : Decimal(15,2);
+	 "TAXAMOUNT" : Decimal(15,2);
+	 "QUANTITY" : Decimal(13,3) ;
+	 "QUANTITYUNIT" : String(3);
+	 "DELIVERYDATE" :LocalDate;
+};
+};
