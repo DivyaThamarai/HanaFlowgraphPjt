@@ -34,4 +34,11 @@ Entity "PurchaseOrderItem" {
 	 "QUANTITYUNIT" : String(3);
 	 "DELIVERYDATE" :LocalDate;
 };
+
+Entity "TAB_SQLEXEC_POITEM" {
+     "PURCHASEORDERID" : Integer; 
+	 "PRODUCT" : String(10);
+	 "NOTEID" : String(10);
+	 "CURRENCY" : String(5);
+};	 
 };
